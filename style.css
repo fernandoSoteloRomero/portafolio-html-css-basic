@@ -353,6 +353,13 @@ progress::-webkit-progress-value {
   color: var(--title-color);
 }
 @media screen and (min-width: 768px) {
+  .portfolio > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  .portfolio .section-title {
+    grid-column: span 2;
+  }
   .services > .container {
     display: grid;
     grid-template-columns: repeat(2, 45%);
@@ -361,11 +368,6 @@ progress::-webkit-progress-value {
   }
   .services .section-title {
     grid-column: span 2;
-  }
-
-  .portfolio {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -382,15 +384,16 @@ progress::-webkit-progress-value {
     height: calc(var(--header-height) - 0.5rem);
   }
 
+  .portfolio > .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .portfolio .section-title {
+    grid-column: span 3;
+  }
   .services > .container {
     grid-template-columns: repeat(3, 30%);
   }
   .services .section-title {
     grid-column: span 3;
-  }
-  .portfolio {
-    grid-template-columns: repeat(3, 33%);
-    justify-content: center;
-    align-content: center;
   }
 }
